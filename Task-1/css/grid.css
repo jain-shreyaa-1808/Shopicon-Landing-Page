@@ -1,0 +1,55 @@
+.container
+{
+    display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 100px 50px 700px 200px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd hd"
+        "sd sd sd sd sd sd sd sd"
+        "main main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+}
+
+.box
+{
+    display:flex;
+    margin: none;
+    
+}
+#header
+{
+    grid-area: hd;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 25px;
+    color:white;
+    background-color: rosybrown;
+    /* position: sticky; */
+    top: 0;
+    z-index: 3;
+}
+#nav
+{
+    grid-area: sd;
+    overflow: hidden;
+    position: sticky;
+    top:0;
+    z-index: 2;
+    
+}
+#content
+{
+    grid-area: main;
+    /* background-image: url('../bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    z-index: -1;
+    
+    
+}
+#footer
+{
+    grid-area: ft;
+}
+
+/* <img src="bg.jpg" alt="img" width=100% style="opacity:0.5"> */
